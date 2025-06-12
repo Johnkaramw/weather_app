@@ -17,20 +17,24 @@ class SearchPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 350, right: 15, left: 15),
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                label: Text('اسم المدينة'),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 350, right: 15, left: 15),
+          child: TextField(
+            decoration: InputDecoration(
+              filled: false,
+              fillColor: Colors.grey,
+              border: OutlineInputBorder(
+                borderSide: BorderSide(color: Color.fromARGB(255, 244, 67, 54)),
+                borderRadius: BorderRadius.circular(15),
               ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.blue),
+              ),
+              label: Text('اسم المدينة'),
             ),
           ),
-        ],
+        ),
       ),
     );
   }
