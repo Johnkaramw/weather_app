@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/search_page.dart';
+import 'package:weather_app/view/Noweatherbody.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,42 +11,12 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.greenAccent,
         title: Center(
           child: Text(
-            'weather',
+            'weather App',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 300),
-              child: Text(
-                'لعرض حاله الطقس المباشرة اضغط على ',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return SearchPage();
-                  },
-                ),
-              );
-            },
-            child: Icon(Icons.search, size: 40, color: Colors.green),
-          ),
-        ],
-      ),
+      body: Noweatherbody(),
     );
   }
 }
